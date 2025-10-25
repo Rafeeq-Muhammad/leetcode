@@ -5,6 +5,7 @@
 #include <bitset>  // NOLINT
 #include <cassert>  // NOLINT
 #include <chrono>  // NOLINT
+#include <climits>
 #include <cmath>  // NOLINT
 #include <cstddef>  // NOLINT
 #include <cstdint>  // NOLINT
