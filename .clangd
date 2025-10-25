@@ -1,0 +1,5 @@
+If:
+  PathMatch: main.cpp
+Diagnostics:
+  Suppress: -Wunused-includes
+
