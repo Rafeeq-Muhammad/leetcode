@@ -6,6 +6,23 @@
 using namespace std;  // NOLINT
 using namespace leetcode_util;  // NOLINT
 
+namespace leetcode_util {
+
+template <typename T>
+constexpr T Max(T value) {
+    return value;
+}
+
+template <typename T, typename... Ts>
+constexpr auto Max(T value, Ts... values) -> std::common_type_t<T, Ts...> {
+    using Result = std::common_type_t<T, Ts...>;
+    Result result = static_cast<Result>(value);
+    ((result = result < static_cast<Result>(values) ? static_cast<Result>(values) : result), ...);
+    return result;
+}
+
+}  // namespace leetcode_util
+
 namespace leetcode_util::detail {
 
 inline void util_anchor() {

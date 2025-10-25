@@ -26,6 +26,7 @@
 #include <sstream>  // NOLINT
 #include <stack>  // NOLINT
 #include <string>  // NOLINT
+#include <type_traits>  // NOLINT
 #include <tuple>  // NOLINT
 #include <unordered_map>  // NOLINT
 #include <unordered_set>  // NOLINT
