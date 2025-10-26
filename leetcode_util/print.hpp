@@ -34,7 +34,15 @@ void print(std::priority_queue<T, Container, Compare> values) {
         ordered.push_back(values.top());
         values.pop();
     }
-    print(ordered);
+    std::cout << "[\n";
+    for (std::size_t i = 0; i < ordered.size(); ++i) {
+        std::cout << "  " << ordered[i];
+        if (i + 1 != ordered.size()) {
+            std::cout << ",";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "]" << std::endl;
 }
 
 template <typename T>
