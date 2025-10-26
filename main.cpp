@@ -12,7 +12,7 @@ int main() {
     sol = Solution();
     // Leetcode inputs start
     auto output = sol.function();
-    // Leetcdoe inputs end
+    // Leetcode inputs end
     print(output);
     return 0;
 }
