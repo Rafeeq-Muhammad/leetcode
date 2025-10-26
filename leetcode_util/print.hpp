@@ -37,4 +37,26 @@ void print(std::priority_queue<T, Container, Compare> values) {
     print(ordered);
 }
 
+template <typename T>
+void print(const std::vector<std::vector<T>>& values) {
+    std::cout << "[\n";
+    for (std::size_t i = 0; i < values.size(); ++i) {
+        std::cout << "  [";
+        bool first = true;
+        for (const auto& value : values[i]) {
+            if (!first) {
+                std::cout << ", ";
+            }
+            std::cout << value;
+            first = false;
+        }
+        std::cout << "]";
+        if (i + 1 != values.size()) {
+            std::cout << ",";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "]" << std::endl;
+}
+
 }  // namespace leetcode_util
