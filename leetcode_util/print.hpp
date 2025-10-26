@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <queue>
 #include <vector>
 
 namespace leetcode_util {
@@ -24,6 +25,16 @@ void print(const std::vector<T>& values) {
         first = false;
     }
     std::cout << "]" << std::endl;
+}
+
+template <typename T, typename Container, typename Compare>
+void print(std::priority_queue<T, Container, Compare> values) {
+    std::vector<T> ordered;
+    while (!values.empty()) {
+        ordered.push_back(values.top());
+        values.pop();
+    }
+    print(ordered);
 }
 
 }  // namespace leetcode_util
