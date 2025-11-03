@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "leetcode_util/util.hpp"
 
 class Solution {
 public:
@@ -10,7 +9,10 @@ public:
 
 int main() {
     Solution sol;
-    cout << sol.function() << endl;
+    sol = Solution();
+    // Leetcode inputs start
+    auto output = sol.function();
+    // Leetcode inputs end
+    print(output);
     return 0;
 }
-
