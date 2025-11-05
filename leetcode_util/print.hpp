@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <queue>
+#include <unordered_map>
 #include <vector>
 
 namespace leetcode_util {
@@ -65,6 +66,20 @@ void print(const std::vector<std::vector<T>>& values) {
         std::cout << "\n";
     }
     std::cout << "]" << std::endl;
+}
+
+template <typename K, typename V>
+void print(const std::unordered_map<K, V>& map) {
+    std::cout << "{";
+    bool first = true;
+    for (const auto& pair : map) {
+        if (!first) {
+            std::cout << ", ";
+        }
+        std::cout << pair.first << ": " << pair.second;
+        first = false;
+    }
+    std::cout << "}" << std::endl;
 }
 
 }  // namespace leetcode_util
