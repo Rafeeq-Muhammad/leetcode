@@ -131,3 +131,10 @@ namespace detail {
 } // namespace detail
 
 }  // namespace leetcode_util
+
+#define dprint(var) \
+    do { \
+        std::cout << #var << ": "; \
+        leetcode_util::detail::print_impl(std::cout, var); \
+        std::cout << std::endl; \
+    } while (0)
